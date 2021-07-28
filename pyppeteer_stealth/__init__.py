@@ -1,6 +1,8 @@
 from pyppeteer.page import Page
 
 from .chrome_app import chrome_app
+from .chrome_csi import chrome_csi
+from .chrome_load_times import chrome_load_times
 from .chrome_runtime import chrome_runtime
 from .iframe_content_window import iframe_content_window
 from .media_codecs import media_codecs
@@ -25,6 +27,8 @@ async def stealth(page: Page, disabled_evasions: list = [], **kwargs) -> None:
 
     evasion_dict = {
         "chrome_app": chrome_app,
+        "chrome_csi": chrome_csi,
+        "chrome_load_times": chrome_load_times,
         "chrome_runtime": chrome_runtime,
         "iframe_content_window": iframe_content_window,
         "media_codecs": media_codecs,
